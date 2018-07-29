@@ -1,0 +1,233 @@
+html{
+    box-sizing: border-box;
+    font-family: Tahoma, sans-serif;
+    color: black;
+}
+body{
+    display: grid;
+    grid-gap: 20px;
+    background: #dddcdc;
+    margin: 20px 50px;
+    line-height: 1.5;
+    position: absolute;
+    
+    
+    }
+.btn{
+    background: black;
+    color:white;
+    text-decoration: none;
+    border: 0;
+    padding: 1rem 3rem;
+    
+    
+}.btn:hover{
+    background: white;
+    color: black;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 2);
+    
+}
+img{
+    max-width: 100%;
+}
+.wrapper{
+    display: grid;
+    grid-gap: 20px;
+}
+.main{
+     display: block; 
+    
+}
+.main ul{
+    background: #ccc9c9;
+   position: fixed;
+    top: 0px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    list-style: none;
+    padding: 10px;
+    border-radius: 20px;
+    z-index: 1;
+    align-self: center;
+    width: 90%
+    
+}
+.main a{
+    display: block;
+    text-align: center;
+     background: #ececec;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+    padding: 1rem 4rem;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    border-radius: 20px;
+    
+}
+.main a:hover{
+    
+    background: black;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6); 
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+.topcontainer{
+    
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:  
+        "picture picture topbox-a"
+        "picture picture topbox-b";  
+    margin-top: 60px;
+    
+}
+
+.picture{
+    grid-area: picture;
+    min-height: 400px;
+    background: url(images/Michelle.jpg);
+    background-size: cover; 
+    background-position: center;
+    padding:  3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+       
+}
+.picture h1{
+    color: white;
+    font-size: 4rem;
+    margin-bottom: 0;
+    
+}.picture p{
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 0;   
+}.topbox a{
+    padding: 10px; 
+     text-align: center;
+}
+
+a {
+    text-align: center;
+}
+ 
+
+.topbox-a{
+    grid-area: topbox-a;
+   
+    
+}
+.topbox-b{
+    grid-area: topbox-b;
+    }
+.topbox{
+    
+      border-radius: 20px;
+    font-size: 20px;
+     background: #ececec;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+     
+    
+    }
+.boxes{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.box{
+      border-radius: 20px;
+  font-size: 20px;
+     background: #ececec;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    justify-content: flex-start;
+}
+.daku{
+    max-height: 180px;
+    max-width: 180px; 
+}
+.tile{
+   grid-gap: 20px;
+  font-size: 20px;
+     background: #ececec;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    justify-content: flex-start;
+     border-radius: 20px;
+}
+.info{
+      border-radius: 20px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: "1fr 1fr"; 
+    background: #ececec;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    
+}
+
+.foot{  
+    border-radius: 20px;
+   background: #302f2f;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    text-align: center;
+    color: white;
+
+    bottom: 0px;
+    right: 0;
+    left: 0;
+     
+}
+@media (max-width: 800px){
+    
+.topcontainer{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:  
+        "picture picture"
+        "topbox-a topbox-b";
+   margin-top: 1px;
+   
+    }
+.main ul{
+     position: static;;
+    grid-template-columns: 1fr;
+    
+  
+}
+    .picture {
+  
+   
+     }
+    .picture p{
+        font-size: 1rem
+    }.picture h1{
+        font-size: 2rem
+    }
+    .info{
+     
+    display: grid;
+    grid-gap:10px;
+    grid-template-areas:"1fr"; 
+    text-align: center; 
+    padding-bottom: 10px;
+
+    
+    }
+    .btn{
+    display: block;
+        text-align: left
+   
+    }
+    .foot{
+        padding:0px;
+    }
+}
